@@ -1,11 +1,19 @@
 autofrag
 ==============================
-[//]: # (Badges)
-[![Travis Build Status](https://travis-ci.com/REPLACE_WITH_OWNER_ACCOUNT/autofrag.svg?branch=master)](https://travis-ci.com/REPLACE_WITH_OWNER_ACCOUNT/autofrag)
-[![codecov](https://codecov.io/gh/REPLACE_WITH_OWNER_ACCOUNT/autofrag/branch/master/graph/badge.svg)](https://codecov.io/gh/REPLACE_WITH_OWNER_ACCOUNT/autofrag/branch/master)
-
 
 Command Line Utility for seperating noncovalent fragments in XYZ files
+
+Steps for Installation:
+
+1. Clone the Repository
+2. Run the setup script from the command line:
+```
+    python setup.py build
+    python setup.py install
+```
+3. You should be able to run the code from the commmand line on an xyz file.
+
+
 
 ### Copyright
 
