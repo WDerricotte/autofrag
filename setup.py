@@ -28,6 +28,11 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     version=versioneer.get_version(),
+    entry_points = {
+                'console_scripts': [
+                            'autofrag = autofrag:main',
+                            ]
+                    },
     cmdclass=versioneer.get_cmdclass(),
     license='MIT',
 
