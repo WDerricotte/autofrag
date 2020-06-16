@@ -49,7 +49,8 @@ class Molecule:
         """
         xyz_file = open(self.filename, 'r')
         self.natoms = self.get_natoms()
-        struct_list = xyz_file.readlines()[1:]
+        struct_list = xyz_file.readlines()[2:]
+        #print(struct_list)
         struct = ""
         struct = ' \n'.join([str(atom) for atom in struct_list])
         return struct 

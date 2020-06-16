@@ -25,9 +25,12 @@ def main():
 
     adj_matrix = frag.build_adj_matrix(mol.atoms, mol.geometry, mol.units)
     frags = frag.get_fragments(adj_matrix)
-    print(frags)
+    print(f"Detected {len(frags)} fragments!")
+    for i in range(len(frags)):
+        print(f"Frag {i+1}: {frags[i]}")
 
-    frag_output = open('frag_%s' %geom_file, "w+")
+    outfile_name = f"frag_{geom_file}"
+    frag_output = open(outfile_name, "w+")
     frag_output.write('%d\n\n' %mol.natoms)
     for frag in frags:
         for atom_num in frag:
@@ -40,6 +43,7 @@ def main():
         if(index!=(len(frags)-1)):
             frag_output.write("--\n")
     frag_output.close()
+    print(f"Output Written to File: \'{outfile_name}\'")
 
 if __name__ == "__main__":
     # Do something if this file is invoked on its own
